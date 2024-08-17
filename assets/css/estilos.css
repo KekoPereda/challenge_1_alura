@@ -349,21 +349,6 @@ footer {
 
 
 
-  .img-monito {
-
-    animation: animate__fadeOut;
-    /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-    /* don't forget to set a duration! */
-    display: none;
-  }
-
-
-  /* .text-area-estilo {
-    width: 100%;
-    height: 300px;
-  } */
-
 
 }
 
