@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 1::Alura::Erik Pereda</title>
+  <link rel="icon" type="image/jpg" href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="assets/css/estilos.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-  gdfgd
+
+  <header>
+    <div class="logo"><img src="assets/img/logo.svg" alt="logo Alura"></div>
+  </header>
+
+  <main class="contenido">
+
+    <div class="panel-encriptador">
+
+      <textarea name="texto_usuario" id="texto_usuario" class="text-area-estilo"
+        placeholder="Ingresa aquí tu texto madafaca"></textarea>
+
+
+
+      <div class="panel-encriptador-info">
+
+        <div class="panel-info">
+          <img class="img-info" src="assets/img/bi_exclamation-circle-fill.png" alt="">
+          <p id="txt-info">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="panel-btn">
+          <button onclick="encriptar()" class="btn btn-encriptar ">Encriptar</button>
+          <button onclick="desencriptar()" class="btn btn-desencriptar ">Desencriptar</button>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="panel-desencriptador">
+      <div class="panel-mensajes">
+        <img class="img-monito" id="monito" src="assets/img/muneco.png" alt="">
+
+        <div class="animate__animated animate__bounce animate__delay-1s txt_animado">
+          <textarea name="texto_final" id="textoFinal" class="texto_final_estilo  "></textarea>
+
+        </div>
+
+        <!-- <input type="text" class="input-estilo" id="desencriptar" name="accion" value=""> -->
+
+        <p class="mensaje" id="mensaje"> </p>
+        <p class="instruccion" id="instruccion">Ingresa el texto que deseas encriptar o desencriptar</p>
+
+
+        <!-- <div class="caja">
+          <button class="btn btn-desencriptar btn-copiar">Copiar</button>
+        </div> -->
+
+        <button class="btn btn-desencriptar btn-copiar">Copiar</button>
+
+
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <p>@erik peredix</p>
+  </footer>
+
+  <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 
 </html>
