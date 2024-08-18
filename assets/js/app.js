@@ -9,15 +9,11 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
         document.getElementById('textoFinal').value = textoFinal;
         document.getElementById('copiar').style.display = 'block';
 
-
-
         // usando operedor ternario 
         mensaje.textContent = exito ? "Texto encriptado con éxito" : "Texto desencriptado con éxito";
         mensaje.style.color = '#2ba5cc';
         informacion.textContent = "";
         monito.src = "assets/img/monitohacker.png";
-
-
 
         // monito.getElementById("monito").src = "excelente.gif";
 
