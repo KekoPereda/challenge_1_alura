@@ -8,6 +8,9 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
         //  Si no hay txt 
         document.getElementById('textoFinal').value = textoFinal;
         document.getElementById('copiar').style.display = 'block';
+
+
+
         // usando operedor ternario 
         mensaje.textContent = exito ? "Texto encriptado con éxito" : "Texto desencriptado con éxito";
         mensaje.style.color = '#2ba5cc';
@@ -30,7 +33,10 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     }
 }
 
-
+// function validarTexto(texto) {
+//     let regex = /^[a-zA-Z]+$/;
+//     return regex.test(texto);
+// }
 
 
 function encriptar() {
@@ -58,6 +64,21 @@ function desencriptar() {
 
     // actualiza lainterfaz
     actualizarInterfaz(textoIngresado, textoProcesado, false);
+}
+
+function copiarTexto() {
+    let textoCopiado = document.getElementById('textoFinal').value;
+
+    navigator.clipboard.writeText(textoCopiado)
+        .then(() => {
+            let mensaje = document.getElementById("mensaje");
+            mensaje.textContent = "Texto copiado al portapapeles";
+            mensaje.classList.remove('animate__animated', 'animate__fadeOut'); // Asegúrate de eliminar cualquier animación anterior
+            mensaje.classList.add('animate__animated', 'animate__fadeIn');
+        })
+        .catch(err => {
+            console.error('Error al copiar el texto: ', err);
+        });
 }
 
 
