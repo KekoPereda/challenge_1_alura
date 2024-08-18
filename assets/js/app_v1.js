@@ -7,6 +7,7 @@ function encriptar() {
   let monito = document.getElementById("monito");
 
 
+
   let textoProcesado = textoIngresado
     .replace(/e/gi, "enter")
     .replace(/i/gi, "imes")
@@ -26,6 +27,7 @@ function encriptar() {
     mensaje.style.color = "#2ba5cc";
     informacion.textContent = "";
     monito.src = "assets/img/monitohacker.png";
+
 
     // mostrar btn coppiar
     // monito.getElementById("monito").src = "excelente.gif";
@@ -74,7 +76,7 @@ function desencriptar() {
     mensaje.style.color = "#e7603c";
     informacion.style.fontSize = "25px";
 
-    // alert("Ingresa un txt madafaca");
+    // alert("Ingresa un txt");
   }
 }
 

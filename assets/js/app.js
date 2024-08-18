@@ -7,15 +7,21 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     if (textoIngresado.length !== 0) {
         //  Si no hay txt 
         document.getElementById('textoFinal').value = textoFinal;
-
-        // operedor ternario 
+        document.getElementById('copiar').style.display = 'block';
+        // usando operedor ternario 
         mensaje.textContent = exito ? "Texto encriptado con éxito" : "Texto desencriptado con éxito";
-        mensaje.style.color = "#2ba5cc";
+        mensaje.style.color = '#2ba5cc';
         informacion.textContent = "";
         monito.src = "assets/img/monitohacker.png";
+
+
+
+        // monito.getElementById("monito").src = "excelente.gif";
+
     } else {
         // Si no hay txt
         document.getElementById('textoFinal').value = "";
+        document.getElementById('copiar').style.display = 'none';
         monito.src = "assets/img/muneco.png";
         mensaje.textContent = "Ningún texto ingresado";
         informacion.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
@@ -53,3 +59,5 @@ function desencriptar() {
     // actualiza lainterfaz
     actualizarInterfaz(textoIngresado, textoProcesado, false);
 }
+
+
