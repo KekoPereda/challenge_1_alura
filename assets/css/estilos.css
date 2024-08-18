@@ -4,10 +4,7 @@
   --color-terciario: #e7faff;
   --color-azulOscruro: #0A3871;
   --color-claro: #F3F5FC;
-
-
 }
-
 
 
 /* background-color: var(--color-primario); */
@@ -64,7 +61,6 @@ footer p {
 
 
 .contenido {
-  /* background-color: rgba(255, 0, 247, 0.124); */
   display: grid;
   grid-template-columns: auto 440px;
 
@@ -72,7 +68,6 @@ footer p {
 
 .panel-encriptador {
   width: 100%;
-  /* background-color: rgb(255, 223, 147); */
   padding: 40px 40px 0 28%;
   margin-top: 100px;
   display: flex;
@@ -86,32 +81,22 @@ footer p {
 .panel-desencriptador {
   margin-top: 40px;
   display: flex;
-  /* justify-content: end; */
   width: 400px;
   height: 100%;
-  /* background-color: var(--color-primario); */
-  /* background-color: rgb(215, 129, 205); */
-
-  /* height: calc(100vh); */
 }
 
 .panel-mensajes {
   width: 400px;
   background-color: var(--color-terciario);
-  /* background-color: rgb(247, 203, 203); */
   border-radius: 10px;
   margin-bottom: 40px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
-  /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px; */
-  /* gap: 16px; */
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
 
 }
 
@@ -128,7 +113,6 @@ footer p {
   width: 320px;
   font-size: 25px;
   font-weight: 400;
-
 }
 
 
@@ -147,8 +131,7 @@ footer p {
   overflow: hidden;
   flex-grow: 1;
   /* line-height: 1.5; */
-  /* background-color: rgb(242, 168, 73); */
-  /* height: 300px; */
+
 
 }
 
@@ -180,8 +163,6 @@ footer p {
   display: none;
 }
 
-/* .input-estilo {}
- */
 
 .panel-info {
   display: flex;
@@ -199,7 +180,6 @@ footer p {
 
 
 .panel-btn {
-  /* background-color: aquamarine; */
   display: flex;
   gap: 24px;
   width: 100%;
@@ -285,7 +265,6 @@ footer p {
 
   .panel-encriptador {
     width: 100%;
-    /* background-color: rgb(255, 223, 147); */
     padding: 40px 40px 0 10%;
     margin-top: 100px;
     display: flex;
@@ -377,7 +356,6 @@ footer p {
     width: 80%;
     font-size: 24px;
     font-weight: 700;
-    /* background-color: yellow; */
   }
 
   .instruccion {
@@ -395,11 +373,6 @@ footer p {
     display: none;
   }
 
-
-  /* .text-area-estilo {
-    width: 100%;
-    height: 300px;
-  } */
 
 
 }
@@ -432,13 +405,11 @@ footer p {
     width: 100%;
     min-height: 70%;
     font-size: 32px;
-
     color: var(--color-primario);
     overflow: hidden;
     flex-grow: 1;
-    /* line-height: 1.5; */
-    /* background-color: rgb(242, 168, 73); */
-    /* height: 300px; */
+
+
 
   }
 
@@ -463,7 +434,7 @@ footer p {
 
   .panel-mensajes {
     display: block;
-
+    height: 200px;
     width: 100%;
     margin: 0 10px;
     padding: 20px auto;
@@ -489,6 +460,16 @@ footer p {
     margin: 0;
     padding: 0;
   }
+
+
+  .mensaje {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
 
 
 }
