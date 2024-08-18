@@ -87,7 +87,7 @@ footer p {
 
 .panel-mensajes {
   width: 400px;
-  background-color: var(--color-terciario);
+  /* background-color: var(--color-terciario); */
   border-radius: 10px;
   margin-bottom: 40px;
   display: flex;
@@ -95,6 +95,9 @@ footer p {
   align-items: center;
   justify-content: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  background: rgb(198, 244, 255);
+  background: linear-gradient(0deg, rgba(198, 244, 255, 0.76234243697479) 0%, rgba(237, 250, 255, 1) 100%);
   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
 
 
@@ -214,7 +217,7 @@ footer p {
 }
 
 .btn-desencriptar {
-  background-color: var(--color-botonDesencriptar);
+  background-color: var(--color-secundario);
   color: var(--color-primario);
   border: 1px solid var(--color-primario);
 
@@ -233,6 +236,7 @@ footer p {
 
 .btn-copiar {
   /* display: none; */
+  background-color: var(--color-secundario);
   margin-left: auto;
   margin-right: auto;
   align-self: center;
@@ -241,6 +245,8 @@ footer p {
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  /* background-color: var(--color-botonDesencriptar); */
 
 }
 
@@ -437,15 +443,22 @@ footer p {
   }
 
   .panel-mensajes {
+    align-items: center;
+    justify-content: center;
     display: block;
-    height: 400px;
+    height: 330px;
     width: 100%;
     margin: 0 10px;
     padding: 20px auto;
   }
 
 
+  #copiar {
+    display: none;
+  }
+
   .cajaCopia {
+
     max-width: 300px;
     width: 100%;
     display: flex;
@@ -456,6 +469,7 @@ footer p {
 
 
   .btn-copiar {
+
     max-width: 300px;
     width: 70%;
   }

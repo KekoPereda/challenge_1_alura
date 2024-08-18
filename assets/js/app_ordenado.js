@@ -1,20 +1,21 @@
-// Declaración de variables importantes al inicio
 let mensaje = document.getElementById("mensaje");
 let informacion = document.getElementById("instruccion");
 let monito = document.getElementById("monito");
 let copiarBoton = document.getElementById('copiar');
 let textoFinalElement = document.getElementById('textoFinal');
+// let panelMensajes = document.getElementById('panelMensajes')
 mensaje.textContent = "Ningún texto ingresado";
 
-// Función de validación de entrada
+
+// Valida entrada de caracteres
 function validarEntrada(event) {
   const input = event.target.value;
   const regex = /^[a-z\s]*$/i;
 
   if (!regex.test(input)) {
     event.target.value = input.slice(0, -1); // Eliminar el último carácter ingresado si no es válido
-    mensaje.textContent = "Solo puedes ingresar letras";
-    mensaje.style.color = "#e7603c"; // Color del mensaje de error
+    mensaje.textContent = "Por favor considere solo palabras sin tildes ni caracteres especiales";
+    mensaje.style.color = "#e7603c";
   } else {
     mensaje.textContent = ""; // Limpiar el mensaje si la entrada es válida
   }
@@ -38,16 +39,23 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     monito.style.height = "60px";
     monito.style.margin = "10px";
   } else {
-    textoFinalElement.value = "";
-    copiarBoton.style.display = 'none';
-    monito.src = "assets/img/muneco.png";
-    monito.style.height = "300px";
-    monito.style.margin = "0px";
-    mensaje.textContent = "Ningún texto ingresado";
-    mensaje.style.color = "#e7603c";
-    informacion.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    informacion.style.fontSize = "25px";
+    muestraIndicaciones();
   }
+}
+
+function muestraIndicaciones() {
+  mensaje.textContent = "Ningún texto ingresado";
+  mensaje.style.color = "#e7603c";
+  informacion.style.display = "block";
+  informacion.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+  informacion.style.fontSize = "25px";
+  textoFinalElement.value = "";
+  textoFinalElement.style.display = "none";
+  copiarBoton.style.display = 'none';
+  monito.src = "assets/img/muneco.png";
+  monito.style.height = "300px";
+  monito.style.margin = "0px";
+
 }
 
 
