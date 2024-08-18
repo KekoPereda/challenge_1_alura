@@ -14,6 +14,7 @@
 
 <body>
 
+
   <header>
     <div class="logo"><img src="assets/img/logo.svg" alt="logo Alura"></div>
   </header>
@@ -47,6 +48,8 @@
 
     <div class="panel-desencriptador">
       <div class="panel-mensajes">
+
+
         <img class="img-monito" id="monito" src="assets/img/muneco.png" alt="">
 
         <textarea name="texto_final" id="textoFinal" class="texto_final_estilo  "></textarea>
@@ -58,19 +61,16 @@
         <p class="instruccion" id="instruccion">Ingresa el texto que deseas encriptar o desencriptar</p>
 
 
-        <!-- <div class="caja">
-          <button class="btn btn-desencriptar btn-copiar">Copiar</button>
-        </div> -->
+        <div id="copiar" class="cajaCopia">
 
-        <button onclick="copiarTexto()" class="btn btn-desencriptar btn-copiar">Copiar texto
-          <span class="material-symbols-outlined">
-            content_copy
-          </span>
-          <!-- <img class="icono_copiar" src="assets/img/icono_copy.svg  " alt=""> -->
+          <button onclick="copiarTexto()" id="btnCopiar" class="btn btn-desencriptar btn-copiar">Copiar texto
+            <span class="material-symbols-outlined">
+              content_copy
+            </span>
+            <!-- <img class="icono_copiar" src="assets/img/icono_copy.svg  " alt=""> -->
 
-        </button>
-
-
+          </button>
+        </div>
 
 
       </div>
