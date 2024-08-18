@@ -4,11 +4,12 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     let informacion = document.getElementById("instruccion");
     let monito = document.getElementById("monito");
 
+
     if (textoIngresado.length !== 0) {
         //  Si no hay txt 
         document.getElementById('textoFinal').value = textoFinal;
         document.getElementById('copiar').style.display = 'block';
-
+        textoFinal.style.display = "block";
         // usando operedor ternario 
         mensaje.textContent = exito ? "Texto encriptado con éxito" : "Texto desencriptado con éxito";
         mensaje.style.color = '#2ba5cc';
@@ -37,6 +38,7 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
 
 function encriptar() {
     let textoIngresado = document.getElementById("texto_usuario").value.toLowerCase();
+    let textoFinal = document.getElementById('textoFinal');
     let textoProcesado = textoIngresado
         .replace(/e/gi, "enter")
         .replace(/i/gi, "imes")
@@ -48,7 +50,7 @@ function encriptar() {
     actualizarInterfaz(textoIngresado, textoProcesado, true);
 }
 
-// Función de desencriptar
+
 function desencriptar() {
     let textoIngresado = document.getElementById("texto_usuario").value.toLowerCase();
     let textoProcesado = textoIngresado

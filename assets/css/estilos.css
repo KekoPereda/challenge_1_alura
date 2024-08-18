@@ -126,7 +126,7 @@ footer p {
   text-align: center;
   justify-content: center;
   width: 320px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
 
 }
@@ -161,7 +161,7 @@ footer p {
 .texto_final_estilo {
   font-family: "Roboto", sans-serif;
   width: 90%;
-  height: 20%;
+  height: 80%;
   padding: 0;
   margin: 0;
   font-size: 24px;
@@ -172,9 +172,12 @@ footer p {
   outline: none;
   overflow: hidden;
   /* flex-grow: 1; */
-  background-color: #c4e6ef;
   /* line-height: 1.5; */
   color: var(--color-azulOscruro);
+}
+
+#textoFinal {
+  display: none;
 }
 
 /* .input-estilo {}
@@ -220,7 +223,6 @@ footer p {
 .btn-encriptar,
 .btn-desencriptar:hover {
   cursor: pointer;
-  background-color: antiquewhite;
 }
 
 
@@ -350,14 +352,21 @@ footer p {
     /* margin-top: 40px; */
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
   }
 
   .panel-mensajes {
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 40px 50px 40px;
+    padding: 20px 0;
+  }
+
+  .texto_final_estilo {
+    height: 100px;
+
   }
 
 
@@ -383,7 +392,6 @@ footer p {
 
 
   .img-monito {
-
     display: none;
   }
 
@@ -408,40 +416,58 @@ footer p {
   .contenido {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0;
+    width: 100%;
   }
 
 
   .panel-encriptador {
-    width: 100%;
     justify-content: center;
-    padding: 0 16px;
-    margin-bottom: 0;
+    margin: 150px 0;
+    width: 100%;
+  }
+
+  .text-area-estilo {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    min-height: 70%;
+    font-size: 32px;
+
+    color: var(--color-primario);
+    overflow: hidden;
+    flex-grow: 1;
+    /* line-height: 1.5; */
+    /* background-color: rgb(242, 168, 73); */
+    /* height: 300px; */
 
   }
 
+
+  .texto_final_estilo {
+    height: 50px;
+
+  }
+
+
+
   .panel-desencriptador {
+
     width: 100%;
-    height: fit-content;
-    display: block;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    padding: 0 16px;
-    margin: 40px 0 0 0;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 
   }
 
   .panel-mensajes {
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-
     display: block;
-    min-height: 160px;
-    width: 100%;
-    margin: 0 0 40px 0;
-    padding: 0;
-  }
 
+    width: 100%;
+    margin: 0 10px;
+    padding: 20px auto;
+  }
 
 
   .panel-btn {
@@ -464,78 +490,5 @@ footer p {
     padding: 0;
   }
 
-
-  .cajaCopia {
-    display: none;
-    width: 100%;
-    height: 20%;
-
-    padding: 0;
-    background-color: #2ba5cc;
-
-  }
-
-  .btn-copiar {
-    /* display: none; */
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-    bottom: 500px;
-    margin-bottom: 40px;
-
-
-
-  }
-
-  /* .text-area-estilo {
-    width: 100%;
-    height: 300px;
-  } */
-
-
-  /* 
-  .panel-btn {
-    display: block;
-    gap: 24px;
-    height: 160px;
-    align-content: space-between;
-  }
-
-  .btn {
-    width: 328px;
-    height: 67px;
-    border-radius: 24px;
-    font-size: 16px;
-
-  }
-
-  .btn-desencriptar {
-    margin-top: 24px;
-    width: 100%;
-  }
-
-
-  .panel-encriptador {
-    width: 100%;
-
-    justify-content: center;
-    padding: 0 40px;
-    margin-bottom: 0;
-
-  }
-
-  .panel-desencriptador {
-    width: 50%;
-    margin-top: 150px;
-    justify-content: center;
-    padding: 0 40px;
-    margin-bottom: 0;
-
-  }
-
-  .contenido {
-    display: grid;
-    grid-template-columns: 1fr;
-  } */
 
 }
