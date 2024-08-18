@@ -35,16 +35,17 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     mensaje.style.color = '#2ba5cc';
     informacion.style.display = "none";
     // informacion.textContent = "";
-    monito.src = "assets/img/monitohacker.png";
+    monito.src = "assets/img/monitohacker2.png";
     monito.style.height = "60px";
     monito.style.margin = "10px";
   } else {
-    muestraIndicaciones();
+    destacaIndicaciones();
   }
 }
 
-function muestraIndicaciones() {
+function destacaIndicaciones() {
   mensaje.textContent = "Ningún texto ingresado";
+  mensaje.classList.add('animate__animated', 'animate__shakeX');
   mensaje.style.color = "#e7603c";
   informacion.style.display = "block";
   informacion.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
@@ -53,7 +54,7 @@ function muestraIndicaciones() {
   textoFinalElement.style.display = "none";
   copiarBoton.style.display = 'none';
   monito.src = "assets/img/muneco.png";
-  monito.style.height = "300px";
+  monito.style.height = "304px";
   monito.style.margin = "0px";
 
 }
