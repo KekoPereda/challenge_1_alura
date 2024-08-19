@@ -1,10 +1,12 @@
+// Declaración de variables importantes al inicio
 let mensaje = document.getElementById("mensaje");
 let informacion = document.getElementById("instruccion");
 let monito = document.getElementById("monito");
 let copiarBoton = document.getElementById('copiar');
 let textoFinalElement = document.getElementById('textoFinal');
-// let panelMensajes = document.getElementById('panelMensajes')
-mensaje.textContent = "Ningún texto ingresado";
+let textoUsuario = document.getElementById("texto_usuario");
+
+
 
 
 // Valida entrada de caracteres
@@ -15,11 +17,25 @@ function validarEntrada(event) {
   if (!regex.test(input)) {
     event.target.value = input.slice(0, -1); // Eliminar el último carácter ingresado si no es válido
     mensaje.textContent = "Por favor considere solo palabras sin tildes ni caracteres especiales";
+    mensaje.classList.add('animate__animated', 'animate__shakeY');
     mensaje.style.color = "#e7603c";
   } else {
     mensaje.textContent = ""; // Limpiar el mensaje si la entrada es válida
   }
 }
+
+
+// Función para validar que el textarea no esté vacío
+function validarTextoNoVacio() {
+  if (textoUsuario.value.trim() === "") {
+    destacaIndicaciones();
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
 
 // Vincular la función de validación al campo de texto
 document.getElementById('texto_usuario').addEventListener('input', validarEntrada);
@@ -27,14 +43,12 @@ document.getElementById('texto_usuario').addEventListener('input', validarEntrad
 // Función de validación y actualización de interfaz
 function actualizarInterfaz(textoIngresado, textoFinal, exito) {
   if (textoIngresado.length !== 0) {
-    // ternario
     mensaje.textContent = exito ? "Texto encriptado con éxito" : "Texto desencriptado con éxito";
     textoFinalElement.style.display = 'block';
     textoFinalElement.value = textoFinal;
     copiarBoton.style.display = 'block';
     mensaje.style.color = '#2ba5cc';
     informacion.style.display = "none";
-    // informacion.textContent = "";
     monito.src = "assets/img/monitohacker2.png";
     monito.style.height = "60px";
     monito.style.margin = "10px";
@@ -42,6 +56,7 @@ function actualizarInterfaz(textoIngresado, textoFinal, exito) {
     destacaIndicaciones();
   }
 }
+
 
 function destacaIndicaciones() {
   mensaje.textContent = "Ningún texto ingresado";
@@ -61,26 +76,32 @@ function destacaIndicaciones() {
 
 
 function encriptar() {
-  let textoIngresado = document.getElementById("texto_usuario").value.toLowerCase();
-  let textoProcesado = textoIngresado
-    .replace(/e/gi, "enter")
-    .replace(/i/gi, "imes")
-    .replace(/a/gi, "ai")
-    .replace(/o/gi, "ober")
-    .replace(/u/gi, "ufat");
-  actualizarInterfaz(textoIngresado, textoProcesado, true);
+  if (validarTextoNoVacio()) {
+    let textoIngresado = textoUsuario.value.toLowerCase();
+    let textoProcesado = textoIngresado
+      .replace(/e/gi, "enter")
+      .replace(/i/gi, "imes")
+      .replace(/a/gi, "ai")
+      .replace(/o/gi, "ober")
+      .replace(/u/gi, "ufat");
+    actualizarInterfaz(textoIngresado, textoProcesado, true);
+  }
 }
 
 
+
 function desencriptar() {
-  let textoIngresado = document.getElementById("texto_usuario").value.toLowerCase();
-  let textoProcesado = textoIngresado
-    .replace(/enter/gi, "e")
-    .replace(/imes/gi, "i")
-    .replace(/ai/gi, "a")
-    .replace(/ober/gi, "o")
-    .replace(/ufat/gi, "u");
-  actualizarInterfaz(textoIngresado, textoProcesado, false);
+  if (validarTextoNoVacio()) {
+    let textoIngresado = textoUsuario.value.toLowerCase();
+    let textoProcesado = textoIngresado
+      .replace(/enter/gi, "e")
+      .replace(/imes/gi, "i")
+      .replace(/ai/gi, "a")
+      .replace(/ober/gi, "o")
+      .replace(/ufat/gi, "u");
+    mensaje.classList.add('animate__animated', 'animate__shakeY');
+    actualizarInterfaz(textoIngresado, textoProcesado, false);
+  }
 }
 
 
