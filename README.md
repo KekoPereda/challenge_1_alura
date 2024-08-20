@@ -1,3 +1,1 @@
-Este es el primer archivo 
-
-Esta es la segunda línea de commit
+Encriptador de texto::Proyecto Alura::Desarrolado por Erik Pereda
